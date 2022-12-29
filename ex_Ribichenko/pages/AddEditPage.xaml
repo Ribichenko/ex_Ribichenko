@@ -1,0 +1,132 @@
+﻿<Page x:Class="ex_Ribichenko.pages.AddEditPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ex_Ribichenko.pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Мероприятия">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="1">
+            <TextBlock Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Text="Название"></TextBlock>
+            <TextBox x:Name="titleTB" Text="{Binding name}" HorizontalAlignment="Left"  Margin="10 0 0 0" Grid.Column="1" Height="25" MinWidth="300" MaxWidth="550" Width="auto"></TextBox>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="1">
+            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Grid.Row="1" Text="Дни"></TextBlock>
+            <ComboBox x:Name="days" >
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+            </ComboBox>
+            <!--<TextBox x:Name="dayTB" Text="{Binding day}" HorizontalAlignment="Left" Margin="10 0 0 0" Grid.Column="1" Grid.Row="1" Height="25" MinWidth="300" MaxWidth="550" Width="auto"></TextBox>-->
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="2">
+            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Grid.Row="2" Text="Дата"></TextBlock>
+            <DatePicker Grid.Row="3" Grid.Column="1" Name="datePicker1" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10 0 0 0" Width="110" Height="25" IsDropDownOpen="True" SelectedDateFormat="Short"/>
+            
+           
+        </StackPanel>
+        <!--<TextBox x:Name="deadlineTB" HorizontalAlignment="Left" Margin="10 0 0 0" Grid.Column="1" Grid.Row="3" Height="25" Width="500"></TextBox>-->
+        <StackPanel Orientation="Horizontal" Grid.Row="3" Grid.Column="1">
+            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Grid.Row="4" Text="Страна"></TextBlock>
+            <ComboBox x:Name="countries">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+                <ComboBoxItem Content="10"></ComboBoxItem>
+                <ComboBoxItem Content="11"></ComboBoxItem>
+                <ComboBoxItem Content="12"></ComboBoxItem>
+                <ComboBoxItem Content="13"></ComboBoxItem>
+                <ComboBoxItem Content="14"></ComboBoxItem>
+                <ComboBoxItem Content="15"></ComboBoxItem>
+            </ComboBox>
+            <!--<TextBox x:Name="countryTB" Text="{Binding country}" HorizontalAlignment="Left" Margin="10 0 0 0" Grid.Column="1" Grid.Row="4" Height="25" Width="50"></TextBox>-->
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Grid.Row="4" Grid.Column="1">
+            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Grid.Row="6" Text="Организатор"></TextBlock>
+            <ComboBox x:Name="organizer">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+                <ComboBoxItem Content="10"></ComboBoxItem>
+            </ComboBox>
+            <!--<TextBox x:Name="organizerTB" Text="{Binding id_organizer}" HorizontalAlignment="Left" Margin="10 0 0 0" Grid.Column="1" Grid.Row="6" Height="25" MinWidth="100" MaxWidth="500" Width="auto"></TextBox>-->
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Grid.Row="5" Grid.Column="1">
+            <TextBlock HorizontalAlignment="Left" Grid.Column="1" VerticalAlignment="Center" Grid.Row="7" Text="Модератор"></TextBlock>
+            <ComboBox x:Name="moderator">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+                <ComboBoxItem Content="10"></ComboBoxItem>
+                <ComboBoxItem Content="11"></ComboBoxItem>
+                <ComboBoxItem Content="12"></ComboBoxItem>
+                <ComboBoxItem Content="13"></ComboBoxItem>
+                <ComboBoxItem Content="14"></ComboBoxItem>
+                <ComboBoxItem Content="15"></ComboBoxItem>
+                <ComboBoxItem Content="16"></ComboBoxItem>
+                <ComboBoxItem Content="17"></ComboBoxItem>
+                <ComboBoxItem Content="18"></ComboBoxItem>
+                <ComboBoxItem Content="19"></ComboBoxItem>
+                <ComboBoxItem Content="20"></ComboBoxItem>
+                <ComboBoxItem Content="21"></ComboBoxItem>
+            </ComboBox>
+            <!--<TextBox x:Name="moderatorTB" Text="{Binding id_moderator}" HorizontalAlignment="Left" Margin="10 0 0 0" Grid.Column="1" Grid.Row="7" Height="25" MinWidth="50" MaxWidth="550" Width="auto"></TextBox>-->
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Grid.Row="6" Grid.Column="1">
+            <TextBlock HorizontalAlignment="Left" Grid.Column="1" VerticalAlignment="Center" Grid.Row="7" Text="Жюри"></TextBlock>
+            <ComboBox x:Name="jury">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+                <ComboBoxItem Content="10"></ComboBoxItem>
+            </ComboBox>
+            <!--<TextBox x:Name="juryTB" Text="{Binding id_moderator}" HorizontalAlignment="Left" Margin="10 0 0 0" Grid.Column="1" Grid.Row="7" Height="25" MinWidth="50" MaxWidth="550" Width="auto"></TextBox>-->
+        </StackPanel>
+
+        <Button x:Name="btnSave" Content="Сохранить" Background="gray" Grid.ColumnSpan="2" Grid.Row="7" Height="60" Width="250" Click="btnSave_Click"></Button>
+        <Button x:Name="btnExit" Content="Назад" Background="gray" Grid.ColumnSpan="2" Grid.Row="7" Height="30" Width="100" HorizontalAlignment="Right" Click="btnExit_Click"></Button>
+    </Grid>
+</Page>

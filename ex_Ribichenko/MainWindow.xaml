@@ -1,0 +1,37 @@
+﻿<Window x:Class="ex_Ribichenko.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ex_Ribichenko"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Background="AntiqueWhite">
+            <Image Source="img/logo.png" HorizontalAlignment="Left"></Image>
+
+        </StackPanel>
+        <!--<StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Content="Войти" Height="30" Width="100" Click="Button_Click"></Button>
+        </StackPanel>-->
+        <!--<DataGrid x:Name="DG" Grid.Row="1" AutoGenerateColumns="False" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Название" Width="*" Binding="{Binding name}"/>
+                <DataGridTextColumn Header="Дата" Width="*" Binding="{Binding date}"/>
+                <DataGridTextColumn Header="Дни" Width="*" Binding="{Binding day}"/>
+                <DataGridTextColumn Header="Страна" Width="*" Binding="{Binding country}"/>
+                <DataGridTextColumn Header="Email организатора" Width="*" Binding="{Binding organizer.email}"/>
+                <DataGridTextColumn Header="Модератор" Width="*" Binding="{Binding id_moderator}"/>
+                <DataGridTextColumn Header="Жюри" Width="*" Binding="{Binding jury.lastname}"/>
+                <DataGridTextColumn Header="Жюри" Width="*" Binding="{Binding jury.lastname}"/>
+                <DataGridTextColumn Header="Жюри" Width="*" Binding="{Binding jury.lastname}"/>
+            </DataGrid.Columns>
+        </DataGrid>-->
+        <Frame x:Name="MainFrame" Grid.Row="1" NavigationUIVisibility="Hidden"/>
+    </Grid>
+</Window>

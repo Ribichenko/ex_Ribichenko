@@ -1,0 +1,34 @@
+﻿<Page x:Class="ex_Ribichenko.pages.eventPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ex_Ribichenko.pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="eventPage">
+
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+        </Grid.RowDefinitions>
+        <DataGrid x:Name="DG" Grid.Row="0" AutoGenerateColumns="False" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Название" Width="*" Binding="{Binding name}"/>
+                <DataGridTextColumn Header="Дата" Width="*" Binding="{Binding date}"/>
+                <DataGridTextColumn Header="Дни" Width="*" Binding="{Binding day}"/>
+                <DataGridTextColumn Header="Страна" Width="*" Binding="{Binding country}"/>
+                <DataGridTextColumn Header="Email организатора" Width="*" Binding="{Binding organizer.email}"/>
+                <DataGridTextColumn Header="Модератор" Width="*" Binding="{Binding id_moderator}"/>
+                <DataGridTextColumn Header="Жюри" Width="*" Binding="{Binding jury.lastname}"/>
+                <DataGridTextColumn Header="Жюри" Width="*" Binding="{Binding jury.lastname}"/>
+                <DataGridTextColumn Header="Жюри" Width="*" Binding="{Binding jury.lastname}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <StackPanel Orientation="Horizontal" Grid.Row="2">
+            <Button x:Name="btnAdd" Grid.Row="1" Content="Добавить" Height="30" HorizontalAlignment="Left" Width="150" Click="btnAdd_Click" ></Button>
+        <Button x:Name="btnDel" Margin="10 0 0 0" Grid.Row="1" Content="Удалить" Height="30" HorizontalAlignment="Left" Width="150" Click="btnDel_Click" ></Button>
+        </StackPanel>
+    </Grid>
+</Page>
